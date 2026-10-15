@@ -35,7 +35,15 @@ This project demonstrates:
 - [ ] Validate read vs write RBAC behaviour
 - [ ] Add managed identity
 - [ ] Add Key Vault
-- [ ] Add resource locks
+- [x] Add resource locks
 - [ ] Add monitoring and audit evidence
 - [ ] Add GitHub Actions and OIDC
 - [ ] Complete final architecture and troubleshooting documentation
+
+
+## Validation Evidence
+
+- Azure Policy denied creation of a storage account without the required `Environment` tag with `RequestDisallowedByPolicy`.
+- A Reader-scoped service principal could read the project resource group but was denied `Microsoft.Storage/storageAccounts/write` with `AuthorizationFailed`.
+- A user-assigned managed identity retrieved a Key Vault secret using Azure RBAC without a stored application password.
+- The Key Vault `CanNotDelete` management lock blocked an attempted deletion with `ScopeLocked`.
