@@ -36,7 +36,7 @@ This project demonstrates:
 - [ ] Add managed identity
 - [ ] Add Key Vault
 - [x] Add resource locks
-- [ ] Add monitoring and audit evidence
+- [x] Add monitoring and audit evidence
 - [ ] Add GitHub Actions and OIDC
 - [ ] Complete final architecture and troubleshooting documentation
 
@@ -47,3 +47,10 @@ This project demonstrates:
 - A Reader-scoped service principal could read the project resource group but was denied `Microsoft.Storage/storageAccounts/write` with `AuthorizationFailed`.
 - A user-assigned managed identity retrieved a Key Vault secret using Azure RBAC without a stored application password.
 - The Key Vault `CanNotDelete` management lock blocked an attempted deletion with `ScopeLocked`.
+
+
+## Monitoring and Audit Evidence
+
+- Azure Activity Log captured management operations including container lifecycle actions, management lock creation, RBAC changes, Key Vault changes, and managed identity creation.
+- Azure Policy state showed the custom `require-environment-tag` policy evaluating project resources as compliant.
+- RBAC listing confirmed the dedicated test service principal retained the `Reader` role at the project resource-group scope.
