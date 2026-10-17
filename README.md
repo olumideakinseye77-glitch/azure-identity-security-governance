@@ -1,11 +1,10 @@
 # Azure Identity, Security & Governance Platform
 
-Azure Cloud Engineering portfolio project focused on identity, RBAC, Key Vault, managed identities, Azure Policy, governance, security controls, and automation with Terraform.
+Building on my networking project, I challenged myself to secure access to Azure resources using RBAC, managed identities, Key Vault, Azure Policy and Terraform. This portfolio lab explores how identity and governance controls behave through deliberate tests.
 
 ## Project Status
 
-**Current phase:** Complete  
-**Overall progress:** 100%
+**Status:** Completed lab, with documented identity, policy, secrets-access and OIDC validation.
 
 ## What This Project Demonstrates
 
@@ -123,8 +122,12 @@ A `CanNotDelete` management lock on the Key Vault blocked an intentional deletio
 
 ### Terraform state
 
-Remote state is stored in Azure Storage, so Terraform state survives Cloud Shell restarts and can be shared safely across sessions.
+Remote state is stored in Azure Storage, so Terraform state survives Cloud Shell restarts and can be reused across sessions. Access to the state still requires appropriate permissions because state can contain sensitive information.
 
 ## Key Takeaway
 
 This project demonstrates how identity, policy, secrets management, resource protection, auditability, Infrastructure as Code, and secretless CI authentication work together as a single Azure governance platform.
+
+## What I want to learn next
+
+My next challenge is regional resilience. In [Project 4: Azure Multi-Region Platform](../azure-multi-region-platform), I am learning how Azure Front Door, application health probes and Terraform work together across UK South and UK West. I want to test what happens when one application becomes unavailable and document both successful responses and failures during recovery.
