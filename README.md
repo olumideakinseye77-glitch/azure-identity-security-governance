@@ -130,4 +130,4 @@ This project demonstrates how identity, policy, secrets management, resource pro
 
 ## What I want to learn next
 
-My next challenge is regional resilience. In [Project 4: Azure Multi-Region Platform](../azure-multi-region-platform), I am learning how Azure Front Door, application health probes and Terraform work together across UK South and UK West. I want to test what happens when one application becomes unavailable and document both successful responses and failures during recovery.
+My next challenge is regional resilience. In [Project 4: Azure Multi-Region Platform](https://github.com/olumideakinseye77-glitch/azure-multi-region-platform), I am learning how Azure Front Door, application health probes and Terraform work together across UK South and UK West. I want to test what happens when one application becomes unavailable and document both successful responses and failures during recovery.
